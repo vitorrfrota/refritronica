@@ -1,375 +1,393 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexus Oficina | Diagnóstico Automotivo Especializado</title>
-<link rel="stylesheet" href="style.css">
+<title>Refritronica | Climatizacao e Sistemas Eletronicos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-
-<header class="header">
-
-<div class="container header-container">
-
-      <img src="images/logo.jpg" alt="Logo Nexus Oficina" class="logo">
-
-          <nav class="nav-desktop">
-
-              <a href="#home">Início</a>
-              <a href="#quemSomos">Quem Somos</a>
-              <a href="#servicos">Serviços</a>
-              <a href="#avaliacoes">Avaliações</a>
-              <a href="#contato">Contato</a>
-
-            </nav>
-
-<button id="menuBtn" class="menu-btn">
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-</div>
-
-</header>
 
 
-<!-- MENU MOBILE -->
+<!-- NAVBAR -->
 
-<div id="mobileMenu" class="mobile-menu">
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
 
-<button id="closeMenu" class="close-menu">✕</button>
 
-<nav>
-
-<a href="#home">Início</a>
-<a href="#quemSomos">Quem Somos</a>
-<a href="#servicos">Serviços</a>
-<a href="#avaliacoes">Avaliações</a>
-<a href="#contato">Contato</a>
-
+<!-- LOGO: coloque o arquivo da logo na mesma pasta do HTML com o nome "logo.png" -->
+    <img src="images/logo.jpg" alt="Refritronica" class="nav-logo-img"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="nav-logo-fallback" style="display:none;">
+      <span class="refri">REFRI</span><span class="tronika">TRONIKA</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#servicos">Servicos</a></li>
+    <li><a href="#sobre">Empresa</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="https://wa.me/5521999999999" class="nav-cta" target="_blank">&#128222; Orcamento</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" class="nav-mobile-link">Home</a></li>
+    <li><a href="#servicos" class="nav-mobile-link">Servicos</a></li>
+    <li><a href="#sobre" class="nav-mobile-link">Empresa</a></li>
+    <li><a href="#contato" class="nav-mobile-link">Contato</a></li>
+    <li><a href="https://wa.me/5521999999999" class="nav-mobile-link" target="_blank">&#128222; Orcamento</a></li>
+  </ul>
 </div>
 
-
-<!-- HERO -->
+<!-- HERO CAROUSEL -->
 
 <section id="home" class="hero">
 
-<div class="hero-carousel">
+  <!-- SLIDE 1: Segurança Eletrônica -->
 
-<div class="slidee activee">
+  <div class="slide active">
+    <div class="slide-bg"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-stripe"></div>
+    <div class="slide-content">
+      <div class="slide-tag">Seguranca Eletronica</div>
+      <h1 class="slide-title">Proteja o que<br>mais <em>importa</em></h1>
+      <p class="slide-desc">Alarmes, CFTV, interfones, porteiro eletronico, luz de emergencia, PABX e portoes automaticos. Solucoes completas de seguranca para sua casa e empresa.</p>
+      <div class="slide-btns">
+        <a href="#contato" class="btn-primary">Solicitar Orcamento</a>
+        <a href="#servicos" class="btn-outline">Ver Servicos</a>
+      </div>
+    </div>
+  </div>
 
-<img src="images/foto3.jpg" alt="Diagnóstico automotivo especializado">
+  <!-- SLIDE 2: Climatização -->
 
-</div>
+  <div class="slide">
+    <div class="slide-bg"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-stripe"></div>
+    <div class="slide-content">
+      <div class="slide-tag">Climatizacao</div>
+      <h1 class="slide-title">Conforto<br>o ano <em>todo</em></h1>
+      <p class="slide-desc">Instalacao e manutencao de ar condicionado Split e ar condicionado de janela. Trabalhamos com as principais marcas do mercado.</p>
+      <div class="slide-btns">
+        <a href="#contato" class="btn-primary">Agendar Instalacao</a>
+        <a href="#servicos" class="btn-outline">Saiba Mais</a>
+      </div>
+    </div>
+  </div>
 
-<div class="slidee">
+  <!-- SLIDE 3: Informática -->
 
-<img src="images/tecnico.jpg" alt="Reparo de módulo automotivo">
+  <div class="slide">
+    <div class="slide-bg"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-stripe"></div>
+    <div class="slide-content">
+      <div class="slide-tag">Informatica</div>
+      <h1 class="slide-title">Redes que<br><em>funcionam</em></h1>
+      <p class="slide-desc">Manutencao e reparo de redes estruturadas para empresas. Infraestrutura solida para o seu negocio crescer com seguranca e estabilidade.</p>
+      <div class="slide-btns">
+        <a href="#contato" class="btn-primary">Fale Conosco</a>
+        <a href="#servicos" class="btn-outline">Ver Servicos</a>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <!-- NAV DOTS + ARROWS -->
 
-<div class="slidee">
-
-<img src="images/injecao.jpg" alt="Scanner automotivo profissional">
-
-</div>
-
-</div>
-
-
-<div class="hero-content">
-
-<h1>Diagnóstico Automotivo de Alta Precisão</h1>
-
-<p>
-Especialistas em reparo eletrônico automotivo, módulos e sistemas avançados.
-</p>
-
-<button class="btn-primary" onclick="abrirWpp()">
-Fale com nossa equipe
-</button>
-
-</div>
-
-
-<div class="hero-dots">
-
-<span class="dott activee" data-index="0"></span>
-<span class="dott" data-index="1"></span>
-<span class="dott" data-index="2"></span>
-
-</div>
-
-</section>
-
-
-<!-- QUEM SOMOS -->
-
-<section id="quemSomos" class="quem-somos">
-
-<div class="container">
-
-<h2>Nexus Oficina</h2>
-
-<div class="about-grid">
-
-<div class="carousel-container">
-
-<img id="carousel-image" src="images/foto1.jpg" alt="Equipe Nexus Oficina">
-
-<div class="dots">
-
-<span class="dot active"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-
-</div>
-
-</div>
-
-
-<div class="text">
-
-<p class="reveal-left">
-
-A Nexus Oficina nasceu com o propósito de oferecer diagnósticos precisos e soluções reais para problemas eletrônicos automotivos.
-
-</p>
-
-<p class="reveal-right">
-
-Com equipamentos modernos e experiência prática, conseguimos identificar falhas complexas que muitas oficinas não conseguem resolver.
-
-</p>
-
-<h3 class="reveal-left">Nossa missão</h3>
-
-<p class="reveal-right">
-
-Entregar diagnóstico honesto, reparo eficiente e atendimento transparente para cada cliente.
-
-</p>
-
-<h3 class="reveal-left">Por que escolher a Nexus?</h3>
-
-<p class="reveal-right">
-
-Porque aqui o foco não é apenas trocar peças — é encontrar a verdadeira causa do problema.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+  <div class="hero-nav">
+    <div class="hero-dots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+    <div class="hero-arrows">
+      <button class="arrow-btn" id="prevBtn">&#8592;</button>
+      <button class="arrow-btn" id="nextBtn">&#8594;</button>
+    </div>
+  </div>
 
 </section>
 
+<!-- SERVICES -->
 
-<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="services-header">
+    <div>
+      <div class="section-label reveal">Nossos Servicos</div>
 
-<section id="servicos" class="servicos">
 
-<div class="container">
+<h2 class="section-title reveal">O que a <em>Refritronica</em><br>pode fazer por voce</h2>
+    </div>
+    <p class="section-desc reveal" style="max-width:340px;text-align:right;">Atendemos residencias e empresas com qualidade, agilidade e garantia em todos os servicos.</p>
+  </div>
 
-<h2>Serviços Especializados</h2>
-
-<div class="servicos-grid">
-
-<div class="servico-card">
-
-<img src="images/airbag.jpg" alt="Reparo módulo airbag">
-
-<h3>Reparo de Módulo Airbag</h3>
-
-<p>Diagnóstico e reparo especializado em módulos de airbag.</p>
-
+  <div class="services-grid">
+<div class="service-card reveal">
+  
+  <img src="images/seg.jpg" alt="Seguranca Eletronica" class="service-card-img"> 
+  
+  <div class="service-icon">&#128275;</div>
+  <h3>Seguranca Eletronica</h3>
+  <p>Solucoes completas de seguranca para proteger seu patrimonio com tecnologia moderna e monitoramento eficiente.</p>
+  <div class="service-tags">
+    <span class="tag">Alarmes</span>
+    <span class="tag">CFTV</span>
+    <span class="tag">Interfone</span>
+    <span class="tag">Portao Automatico</span>
+    <span class="tag">PABX</span>
+  </div>
 </div>
 
-<div class="servico-card">
+<div class="service-card reveal">
 
-<img src="images/abs.jpg" alt="Diagnóstico ABS">
-
-<h3>Sistema ABS</h3>
-
-<p>Diagnóstico avançado e solução para falhas em sistema ABS.</p>
-
+  <img src="images/ar.jpg" alt="Climatizacao" class="service-card-img">
+  
+  <div class="service-icon">&#10052;</div>
+  <h3>Climatizacao</h3>
+  <p>Instalacao e manutencao de ar condicionado Split e janela. Ambientes confortaveis durante todo o ano.</p>
+  <div class="service-tags">
+    <span class="tag">Ar Split</span>
+    <span class="tag">Ar Janela</span>
+    <span class="tag">Instalacao</span>
+    <span class="tag">Manutencao</span>
+  </div>
 </div>
 
-<div class="servico-card">
-
-<img src="images/injecao.jpg" alt="Diagnóstico injeção eletrônica">
-
-<h3>Injeção Eletrônica</h3>
-
-<p>Análise completa da central de injeção eletrônica.</p>
-
+<div class="service-card reveal">
+  
+   <img src="images/info.jpg" alt="Informatica" class="service-card-img"> 
+  
+  <div class="service-icon">&#128187;</div>
+  <h3>Informatica</h3>
+  <p>Manutencao e reparo de redes estruturadas. Infraestrutura de rede para empresas de todos os portes.</p>
+  <div class="service-tags">
+    <span class="tag">Redes</span>
+    <span class="tag">Cabeamento</span>
+    <span class="tag">Manutencao</span>
+    <span class="tag">Infraestrutura</span>
+  </div>
 </div>
 
-<div class="servico-card">
-
-<img src="images/scanner.jpg" alt="Scanner automotivo">
-
-<h3>Scanner Profissional</h3>
-
-<p>Leitura completa de módulos com scanners profissionais.</p>
-
-</div>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
+<!-- ABOUT -->
 
-<!-- AVALIAÇÕES -->
-
-<section id="avaliacoes" class="avaliacoes">
-
-<div class="container">
-
-<h2>O que nossos clientes dizem no Google</h2>
-
-<div class="nx2-carousel">
-
-<div class="nx2-carousel-track">
-
-<div class="nx2-slide active">
-
-<p>Excelente atendimento e diagnóstico preciso.</p>
-
-<strong>★★★★★</strong>
-
+<section id="sobre">
+  <div class="about-visual reveal">
+<div class="about-highlight gold">
+  <div class="ah-icon">&#128197;</div>
+  <div class="ah-num">20+</div>
+  <div class="ah-label">Anos de Experiencia</div>
+  <div class="ah-desc">Atuando no mercado desde o inicio dos anos 2000</div>
+  <div class="ah-bg-icon">&#128197;</div>
 </div>
 
-<div class="nx2-slide">
-
-<p>Oficina extremamente profissional e honesta.</p>
-
-<strong>★★★★★</strong>
-
+<div class="about-highlight blue">
+  <div class="ah-icon">&#128101;</div>
+  <div class="ah-num">500+</div>
+  <div class="ah-label">Clientes Atendidos</div>
+  <div class="ah-desc">Residencias e empresas em toda a regiao</div>
+  <div class="ah-bg-icon">&#128101;</div>
 </div>
 
-<div class="nx2-slide">
-
-<p>Resolveram um problema que outras oficinas não conseguiram.</p>
-
-<strong>★★★★★</strong>
-
+<div class="about-highlight gold">
+  <div class="ah-icon">&#128275;</div>
+  <div class="ah-num">3</div>
+  <div class="ah-label">Areas de Atuacao</div>
+  <div class="ah-desc">Seguranca, Climatizacao e Informatica</div>
+  <div class="ah-bg-icon">&#128275;</div>
 </div>
 
+<div class="about-highlight blue">
+  <div class="ah-icon">&#11088;</div>
+  <div class="ah-num">100%</div>
+  <div class="ah-label">Satisfacao</div>
+  <div class="ah-desc">Garantia em todos os servicos realizados</div>
+  <div class="ah-bg-icon">&#11088;</div>
 </div>
 
+<div class="about-highlight wide gold">
+  <div class="ah-icon" style="font-size:2.4rem;">&#9889;</div>
+  <div class="wide-divider"></div>
+  <div class="ah-text">
+    <div class="ah-num">Rapido</div>
+    <div class="ah-label">Atendimento e Orcamento</div>
+
+<div class="ah-desc">Respondemos no mesmo dia pelo WhatsApp ou telefone</div>
+  </div>
 </div>
 
-<div class="nx2-dots"></div>
-
-<a class="btn-primary" href="https://g.page/r/" target="_blank">
-
-Ver avaliações no Google
-
-</a>
-
-</div>
-
+  </div>
+  <div class="about-text reveal">
+    <div class="section-label">Nossa Empresa</div>
+    <h2 class="section-title">Experiencia e <em>confianca</em><br>em cada servico</h2>
+    <p class="section-desc">A Refritronica atua ha mais de 20 anos no mercado de climatizacao e sistemas eletronicos. Nossa equipe de tecnicos certificados garante qualidade e seguranca em todos os servicos prestados.</p>
+    <ul class="about-list">
+      <li>Tecnicos certificados e experientes</li>
+      <li>Atendimento rapido e pontual</li>
+      <li>Garantia em todos os servicos</li>
+      <li>Atendemos residencias e empresas</li>
+      <li>Orcamento gratuito e sem compromisso</li>
+    </ul>
+    <a href="#contato" class="btn-primary">Solicitar Orcamento</a>
+    <div class="about-stats">
+      <div class="stat-box">
+        <div class="num">500+</div>
+        <div class="lbl">Clientes Atendidos</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">20+</div>
+        <div class="lbl">Anos no Mercado</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">100%</div>
+        <div class="lbl">Satisfacao Garantida</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- CONTACT -->
 
-<!-- CONTATO -->
+<section id="contato">
+  <div class="section-label reveal">Contato</div>
+  <h2 class="section-title reveal">Fale com a <em>Refritronica</em></h2>
+  <p class="section-desc reveal">Entre em contato conosco pelo formulario, telefone ou WhatsApp. Respondemos rapidamente!</p>
 
-<section id="contato" class="contato">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+  <div class="contact-item">
+    <div class="ci-icon">&#128222;</div>
+    <div class="ci-text">
+      <div class="ctitle">Telefones</div>
+      <div class="cval">
+        <a href="tel:2138720686">(21) 3872-0686</a><br>
+        <a href="tel:2139880686">(21) 3988-0686</a>
+      </div>
+    </div>
+  </div>
 
-<div class="container">
+  <div class="contact-item">
+    <div class="ci-icon">&#128242;</div>
+    <div class="ci-text">
+      <div class="ctitle">Celular / WhatsApp</div>
+      <div class="cval">
+        <a href="https://wa.me/5521996168557" target="_blank">(21) 99616-8557 — Vivo</a><br>
+        <a href="https://wa.me/5521991968557" target="_blank">(21) 99196-8557 — Tim</a>
+      </div>
+    </div>
+  </div>
 
-<h2>Entre em Contato</h2>
+  <div class="contact-item">
+    <div class="ci-icon">&#9993;</div>
+    <div class="ci-text">
+      <div class="ctitle">E-mail</div>
+      <div class="cval">
+        <a href="mailto:refritronica@refritronica.com.br">refritronica@refritronica.com.br</a>
+      </div>
+    </div>
+  </div>
 
-<p>Clique abaixo e converse com nossa equipe.</p>
-
-<button class="btn-primary" onclick="abrirWpp()">
-
-Clique aqui e converse com nossa equipe
-
-</button>
+  <div class="contact-item">
+    <div class="ci-icon">&#128205;</div>
+    <div class="ci-text">
+      <div class="ctitle">Endereco</div>
+      <div class="cval">Nova Iguacu, RJ<br>(Substituir pelo endereco real)</div>
+    </div>
+  </div>
 
 </div>
 
+<div class="contact-form reveal">
+  <h3>Envie uma mensagem</h3>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" placeholder="Seu nome">
+    </div>
+    <div class="form-group">
+      <label>Telefone</label>
+      <input type="tel" placeholder="(21) 99999-9999">
+    </div>
+  </div>
+  <div class="form-group">
+    <label>E-mail</label>
+    <input type="email" placeholder="seu@email.com">
+  </div>
+  <div class="form-group">
+    <label>Servico de interesse</label>
+    <select>
+      <option value="">Selecione...</option>
+      <option>Seguranca Eletronica — Alarme</option>
+      <option>Seguranca Eletronica — CFTV</option>
+      <option>Seguranca Eletronica — Interfone/Porteiro</option>
+      <option>Seguranca Eletronica — Portao Automatico</option>
+      <option>Climatizacao — Instalacao Ar Split</option>
+      <option>Climatizacao — Instalacao Ar Janela</option>
+      <option>Climatizacao — Manutencao</option>
+      <option>Informatica — Redes Estruturadas</option>
+      <option>Outro</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Mensagem</label>
+    <textarea placeholder="Descreva o que voce precisa..."></textarea>
+  </div>
+
+
+<button class="form-submit">&#128232; Enviar Mensagem</button>
+</div>
+
+  </div>
 </section>
-
-
-<!-- LOCALIZAÇÃO -->
-
-<section class="localizacao">
-
-<div class="container">
-
-<h2>Onde estamos</h2>
-
-<div class="container-loc">
-
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18..."
-width="100%"
-height="350"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
-</div>
-
-<a class="btn-primary adress" target="_blank"
-href="https://maps.google.com">
-
-Rua Capitão Mário Barbido
-
-</a>
-
-</div>
-
-</section>
-
 
 <!-- FOOTER -->
 
-<footer class="footer">
-
-<div class="container footer-dev">
-
-<p>© 2026 Nexus Oficina</p>
-
-<p>Desenvolvido por VF Web</p>
-
-</div>
-
+<footer>
+  <a href="#home" class="footer-logo">
+    <img src="images/logo.jpg" alt="Refritronica" class="footer-logo-img"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="footer-logo-fallback" style="display:none;">
+      <span class="refri">REFRI</span><span class="tronika">TRONIKA</span>
+    </span>
+  </a>
+  <p class="footer-copy">&copy; 2025 Refritronica Comercio e Servicos. Todos os direitos reservados.</p><br>
+  <p> Site construído por AXIA VF</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#servicos">Servicos</a>
+    <a href="#sobre">Empresa</a>
+    <a href="#contato">Contato</a>
+  </div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+
+<a href="https://wa.me/5521996168557" class="whatsapp-float" target="_blank" rel="noopener">
+  <span class="wa-label">Fale conosco!</span>
+  <span class="wa-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </span>
+</a>
 
 
 <script src="script.js"></script>
-
-</body>
-
-</html>
-
-
-    <script src="script.js"></script>
 </body>
 </html>
