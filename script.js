@@ -85,3 +85,18 @@ function checkReveal() {
 
 window.addEventListener('scroll', checkReveal);
 checkReveal();
+
+// WhatsApp: sobe quando chega no footer
+var waFloat = document.querySelector('.whatsapp-float');
+var footer = document.querySelector('footer');
+
+window.addEventListener('scroll', function() {
+  var footerTop = footer.getBoundingClientRect().top;
+  var windowH = window.innerHeight;
+  if (footerTop < windowH) {
+    var overlap = windowH - footerTop;
+    waFloat.style.bottom = (32 + overlap) + 'px';
+  } else {
+    waFloat.style.bottom = '32px';
+  }
+});
