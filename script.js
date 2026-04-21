@@ -46,7 +46,7 @@ function goTo(index) {
 }
 
 function startAuto() {
-  autoTimer = setInterval(function() { goTo(current + 1); }, 5500);
+  autoTimer = setInterval(function() { goTo(current + 1); }, 7500);
 }
 
 function resetAuto() {
